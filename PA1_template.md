@@ -14,6 +14,7 @@ activity = read.csv("activity.csv")
 file.remove("activity.csv")
 
 
+
 Process/transform the data (if necessary) into a format suitable for your analysis
 
 
@@ -35,20 +36,31 @@ Calculate and report the mean and median total number of steps taken per day
 
 mean(daily.steps$steps)
 
+9354.23
+
 median(daily.steps$steps)
+
+10395
 
 ## What is the average daily activity pattern?
 
 Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
-
+```{r}
 daily.activity <- 
         aggregate(
                 activity$steps, by=list(activity$interval), FUN=mean, 
                 na.rm=TRUE)
+                
+                
 colnames(daily.activity) = c("interval", "steps")
+
+
 plot(
         daily.activity$interval, daily.activity$steps, type = "l", 
         xlab="Interval", ylab="Number of steps")
+        
+ ```       
+        
         
         
         
