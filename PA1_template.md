@@ -37,11 +37,11 @@ Calculate and report the mean and median total number of steps taken per day
 ```{r}
 mean(daily.steps$steps)
 ```
-9354.23
+
 ```{r}
 median(daily.steps$steps)
 ```
-10395
+
 
 ## What is the average daily activity pattern?
 
